@@ -4,7 +4,7 @@
 
 	export let range = ['horizon'] as RANGE[];
 	export let chunk = 5;
-	export let id = (o: {id: string}) => o.id;
+	export let id = (o: { id: string }) => o.id;
 	export let base = (_) => '';
 
 	export let list: any[] = [];
@@ -26,7 +26,7 @@
 	$: console.log({
 		top: bit.top & global_focus,
 		bottom: bit.bottom & global_focus,
-		focus: bit.focus & global_focus,
+		focus: bit.focus & global_focus
 	});
 	$: max_page = 1 + Math.floor(list.length / chunk);
 	$: if (list.length) {
