@@ -5,7 +5,7 @@
 	export let range = ['horizon'] as RANGE[];
 	export let chunk = 5;
 	export let id = (o: { id: string }) => o.id;
-	export let base = (_) => '';
+	export let base = (value: any) => '';
 
 	export let list: any[] = [];
 	export let focus = '';

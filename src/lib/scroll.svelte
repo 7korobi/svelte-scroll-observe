@@ -10,13 +10,13 @@
 
 	export let name = '';
 	export let range: RANGE[] = [COMPRESS, HIDDEN, PEEP, SHOW, FOCUS];
-	export let focus = '';
+	export let focus = 0;
 	export let state = '';
 
 	const tracker = observe(range, {
 		change(ops) {
 			focus = ops.focus;
-			state = ops.state;
+			state = ops.state!;
 		}
 	});
 
