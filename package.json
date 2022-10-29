@@ -1,6 +1,6 @@
 {
 	"name": "svelte-scroll-observe",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"homepage": "https://github.com/7korobi/svelte-scroll-observe/blob/main/src/lib/",
 	"license": "MIT",
 	"keywords": [
@@ -44,7 +44,8 @@
 		"svelte": "^3.52.0",
 		"svelte-browser": "^0.4.4",
 		"svelte-petit-utils": "^0.3.2",
-		"tslib": "^2.4.0"
+		"tslib": "^2.4.0",
+		"ua-parser-js": "^1.0.32"
 	},
 	"exports": {
 		"./package.json": "./package.json",

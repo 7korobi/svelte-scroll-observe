@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { interval } from 'svelte-petit-utils';
+	import { intervalOn } from 'svelte-petit-utils';
 	import { observe } from './observer';
 
 	export let onPeep = () => {
@@ -12,7 +12,7 @@
 	const tracker = observe(['peep', 'hidden'], {
 		change(ops) {
 			if (ops.state === 'peep') {
-				bye = interval(onPeep, 200);
+				bye = intervalOn(onPeep, 200);
 			} else {
 				bye && bye();
 			}
