@@ -1,9 +1,12 @@
 <script lang="ts">
+	import { __BROWSER__ } from 'svelte-petit-utils';
 	import { Pager } from '$lib';
 
 	let list = new Array(100).fill('').map((o, i) => ({ id: i + 1, name: (i + 1).toString() }));
 	let at_page = 1;
-	let hash = '';
+
+	let hash = __BROWSER__ ? Number(location.hash.slice(1)) : 0;
+	$: if (__BROWSER__) location.hash = hash;
 </script>
 
 <h1>Welcome to your library project</h1>
